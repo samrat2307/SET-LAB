@@ -5,6 +5,17 @@ int mod = 1e9+7;
 
 vector<int>row={1,-1,0,0},col={0,0,1,-1};
 
+bool func(int i,int j,int m,int n,vector<vector<int>>&g){
+    if(i==-1 && j==m-1)return true;
+    
+    bool a=false,b=false;
+    
+    if(i+1<n && g[i+1][j])a=func(i+1,j,m,n,g);
+    if(j+1<m && g[i][j+1])b=func(i,j+1,m,n,g);
+    
+    return a || b;
+}
+
 int main(){
     
     int n,m;
