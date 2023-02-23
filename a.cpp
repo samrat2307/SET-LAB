@@ -112,6 +112,7 @@ int main(){
         cout<<ct-1<<endl;
         cout<<res<<endl;
     }
+    cout<<"You are outside the function";
 
     return 0;
 }
